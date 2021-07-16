@@ -1,0 +1,6 @@
+python -m venv sandbox
+source sandbox/bin/activate
+pip install wheel
+pip install apache-airflow==2.1.0 --constraint https://gist.githubusercontent.com/marclamberti/742efaef5b2d94f44666b0aec020be7c/raw/21c88601337250b6fd93f1adceb55282fb07b7ed/constraint.txt
+airflow db init
+airflow webserver
